@@ -11,7 +11,7 @@ def load_data(filepath):
 def get_biggest_bar(data):
     biggest_bar_object = max(data, key=lambda x:x['Cells']['SeatsCount'])
     biggest_bar_adress = biggest_bar_object['Cells']['Address']
-    return u'Самый маленький бар: {}'.format(biggest_bar_adress)
+    return u'Самый большой бар: {}'.format(biggest_bar_adress)
 
 def get_smallest_bar(data):
     smallest_bar_object = min(data,key=lambda x:x['Cells']['SeatsCount'])
@@ -24,8 +24,7 @@ def get_closest_bar(data, longitude, latitude):
     return u'Самый близкий бар для тебя: {}'.format(closest_bar_adress)
 
 if __name__ == '__main__':
-    print('Введите путь до файла с данными или сам файл, если он находится в этой директории')
-    json_filepath = input()
+    json_filepath = input('Введите путь до файла с данными или сам файл, если он находится в этой директории:\n')
     print('Ваш файл c данными: {}'.format(json_filepath.split('/')[-1]))
     print('Теперь введите ваши координаты')
     print('Долгота:')
