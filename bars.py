@@ -29,10 +29,10 @@ def get_closest_bar(bar_data, longitude, latitude):
 
 if __name__ == '__main__':
 
-    json_filepath = input('Введите путь до файла с данными или сам файл,\
-    если он находится в этой директории:\n')
-    bar_longitude= float(input('Ваш файл c данными: {}\n\
-    Теперь введите ваши координаты\nДолгота:'.format(json_filepath.split('/')[-1])))
+    json_filepath = input('Введите путь до файла с данными или сам файл,' +
+    'если он находится в этой директории:\n')
+    bar_longitude= float(input('Ваш файл c данными: {}'.format(json_filepath.split('/')[-1] +
+    '\nТеперь введите ваши координаты\nДолгота:')))
     bar_latitude = float(input('Широта:'))
 
     bar_data = load_data(json_filepath)
